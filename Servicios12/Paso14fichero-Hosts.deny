@@ -32,7 +32,7 @@
 
 
 
-sshd: 192.168.104.197 : spawn echo `date` " Acceso denegado a " %a %u@%h "por el servicio" %d >> /home/eduardo/log.txt
+sshd: ALL : spawn echo `date` " Acceso denegado a " %a %u@%h "por el servicio" %d >> /home/eduardo/log.txt
 
 
 
