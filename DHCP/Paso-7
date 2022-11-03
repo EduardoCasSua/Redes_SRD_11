@@ -1,0 +1,44 @@
+shared-network relay{
+
+option domain-name "eduardocs.edu";
+
+option domain-name-servers 8.8.8.8;
+
+default-lease-time 7200;
+
+max-lease-time 14400;
+
+
+
+subnet 192.168.4.128 netmask 255.255.255.192{
+
+   range 192.168.4.140 192.168.4.150;
+
+   option subnet-mask 255.255.255.192;
+
+   option routers 192.168.4.129;
+
+   option broadcast-address 192.168.4.255;
+
+}
+
+
+
+
+
+subnet 192.168.4.0 netmask 255.255.255.192{
+
+   range 192.168.4.10 192.168.4.20;
+
+   option subnet-mask 255.255.255.192;
+
+   option routers 192.168.4.1;
+
+   option broadcast-address 192.168.4.127;
+
+}
+
+
+
+}
+
