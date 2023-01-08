@@ -1,0 +1,29 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+zone "eduardocs.edu"
+        {
+        type master;
+        file "/var/lib/bind/zones/db.eduardocs";
+        notify yes;
+        #allow-transfer { 192.168.4.15; };
+        allow-update{
+                127.0.0.1;
+                192.168.4.0/24;};
+        };
+
+zone "4.168.192.in-addr.arpa"
+        {
+        type master;
+        file "/var/lib/bind/zones/db.4.168.192";
+        notify yes;
+        #allow-transfer { 192.168.4.15; };
+        allow-update{
+                127.0.0.1;
+                192.168.4.0/24;};
+        };
