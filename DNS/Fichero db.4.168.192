@@ -1,8 +1,19 @@
-$TTL 604800 ; 1 week
-@        IN SOA ns.eduardocs.edu. root.eduardocs.edu. (
-                                1 360000 3600 3600000 360000)
-                 IN NS ns.eduardocs.edu.
-10                       IN PTR          ns.eduardocs.edu.
-10                       IN PTR          aliaseduardocs.eduardocs.edu.
-11                       IN PTR          PC-01.eduardocs.edu.
-12.4.168.192.in-addr.arpa. IN PTR        otro.eduardocs.edu.
+$ORIGIN .
+$TTL 604800     ; 1 week
+4.168.192.in-addr.arpa  IN SOA  eduardocs-linux.eduardocs.edu. root.eduardocs.edu. (
+                                9          ; serial
+                                1          ; refresh (1 second)
+                                3600       ; retry (1 hour)
+                                3600000    ; expire (5 weeks 6 days 16 hours)
+                                360000     ; minimum (4 days 4 hours)
+                                )
+                        NS      eduardocs-linux.eduardocs.edu.
+                        NS      esclavo-eduardocs-linux.eduardocs.edu.
+$ORIGIN 4.168.192.in-addr.arpa.
+10                      PTR     aliaseduardocs.eduardocs.edu.
+                        PTR     eduardocs-linux.eduardocs.edu.
+$TTL 3600       ; 1 hour
+101                     PTR     cliente-eduardocs-linux.eduardocs.edu.
+$TTL 604800     ; 1 week
+11                      PTR     PC-01.eduardocs.edu.
+12                      PTR     otro.eduardocs.edu.
