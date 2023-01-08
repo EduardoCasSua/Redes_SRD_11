@@ -1,0 +1,23 @@
+$ORIGIN .
+$TTL 604800     ; 1 week
+eduardocs.edu           IN SOA  eduardocs-linux.eduardocs.edu. root.eduardocs.edu. (
+                                13         ; serial
+                                1          ; refresh (1 second)
+                                3600       ; retry (1 hour)
+                                3600000    ; expire (5 weeks 6 days 16 hours)
+                                3600       ; minimum (1 hour)
+                                )
+                        NS      eduardocs-linux.eduardocs.edu.
+                        NS      esclavo-eduardocs-linux.eduardocs.edu.
+$ORIGIN eduardocs.edu.
+aliaseduardocs          CNAME   eduardocs-linux
+$TTL 3600       ; 1 hour
+cliente-eduardocs-linux A       192.168.4.101
+                        TXT     "31fb23613339fb27b7d5d355a0db76737b"
+$TTL 604800     ; 1 week
+eduardocs-linux         A       192.168.4.10
+esclavo-eduardocs-linux A       192.168.4.15
+otro                    A       192.168.4.12
+PC-01                   A       192.168.4.11
+$TTL 3  ; 3 seconds
+prueba                  A       192.168.4.40
