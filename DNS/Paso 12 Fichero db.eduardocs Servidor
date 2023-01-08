@@ -1,15 +1,19 @@
-$TTL 604800 ; 1 week
-@ IN SOA ns.eduardocs.edu. root.eduardocs.edu. (
-                                1 ; serial no
-                                360000 ; refresh
-                                3600 ; retry
-                                3600000 ; expire
-                                3600 ; default ttl
+  GNU nano 4.8                             db.eduardocs                                         
+$ORIGIN .
+$TTL 604800     ; 1 week
+eduardocs.edu           IN SOA  eduardocs-linux.eduardocs.edu. root.eduardocs.edu. (
+                                13         ; serial
+                                1          ; refresh (1 second)
+                                3600       ; retry (1 hour)
+                                3600000    ; expire (5 weeks 6 days 16 hours)
+                                3600       ; minimum (1 hour)
                                 )
-                IN NS ns.eduardocs.edu.
-                IN NS esclavo-eduardocs-linux.eduardocs.edu.
-ns IN A 192.168.4.10
-PC-01 IN A 192.168.4.11
-otro.eduardocs.edu. IN A 192.168.4.22
-esclavo-eduardocs-linux.eduardocs.edu. IN A 192.168.4.15
-aliaseduardocs IN CNAME ns
+                        NS      eduardocs-linux.eduardocs.edu.
+                        NS      esclavo-eduardocs-linux.eduardocs.edu.
+$ORIGIN eduardocs.edu.
+aliaseduardocs          CNAME   eduardocs-linux
+$TTL 604800     ; 1 week
+eduardocs-linux         A       192.168.4.10
+esclavo-eduardocs-linux A       192.168.4.15
+otro                    A       192.168.4.12
+PC-01                   A       192.168.4.11
