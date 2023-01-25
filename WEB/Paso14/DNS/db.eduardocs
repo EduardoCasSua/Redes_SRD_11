@@ -1,0 +1,13 @@
+$TTL 604800 ; 1 week
+@	IN SOA eduardocs-linux.eduardocs.edu. root.eduardocs.edu. (
+			1 ; serial no
+			360000 ; refresh
+			3600 ; retry
+			3600000 ; expire
+			3600 ; default ttl
+			)
+		IN NS eduardocs-linux.eduardocs.edu.
+eduardocs-linux.eduardocs.edu. IN A 192.168.4.10
+otrodominio.eduardocs.edu. IN CNAME sitio3.eduardocs.edu.
+sitio3.eduardocs.edu. IN A 192.168.4.10
+sitio4.eduardocs.edu. IN A 192.168.4.20
