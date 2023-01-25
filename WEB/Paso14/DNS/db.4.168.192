@@ -1,0 +1,8 @@
+$TTL 604800 ; 1 week
+@	IN SOA eduardocs-linux.eduardocs.edu. root.eduardocs.edu. (
+			1 360000 3600 3600000 360000)
+		IN NS eduardocs-linux.eduardocs.edu.
+10.4.168.192.in-addr.arpa. IN PTR	eduardocs-linux.eduardocs.edu.
+10.4.168.192.in-addr.arpa. IN PTR       sitio3.eduardocs.edu.
+20.4.168.192.in-addr.arpa. IN PTR       sitio4.eduardocs.edu.
+10.4.168.192.in-addr.arpa. IN PTR       otrodominio.eduardocs.edu.
