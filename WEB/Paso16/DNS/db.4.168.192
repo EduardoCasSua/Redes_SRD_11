@@ -4,6 +4,6 @@ $TTL 604800 ; 1 week
                 IN NS eduardocs-linux.eduardocs.edu.
 10.4.168.192.in-addr.arpa. IN PTR       eduardocs-linux.eduardocs.edu.
 20.4.168.192.in-addr.arpa. IN PTR       sitio5.eduardocs.edu.
-10.4.168.192.in-addr.arpa. IN PTR       *.eduardocs.edu.
-20.4.168.192.in-addr.arpa. IN PTR       otrodominio.eduardocs.edu.
+10.4.168.192.in-addr.arpa. IN PTR       *.alias.eduardocs.edu.
+10.4.168.192.in-addr.arpa. IN PTR       otrodominio.eduardocs.edu.
 
