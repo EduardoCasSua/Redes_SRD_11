@@ -31,5 +31,5 @@
 # Database driver: mysql, pgsql, sqlite
 driver = mysql
 connect = host=127.0.0.1 dbname=vmail user=1mail password=1234
-default_pass_schema = PLAIN-MD5
+default_pass_scheme = PLAIN-MD5
 password_query = select email AS user, password from virtualusers where (email='%u' or username='%n') and active=1
