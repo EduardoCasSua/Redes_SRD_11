@@ -1,0 +1,5 @@
+user = 1mail
+password = 1234
+hosts = 127.0.0.1
+dbname = vmail
+query = select concat('/',substring_index(email,'@',1), '/Maildir/') from virtualusers where email='%s' and active=1
