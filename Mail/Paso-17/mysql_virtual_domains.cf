@@ -1,0 +1,7 @@
+                                               
+user = 1mail
+password = 1234
+hosts = 127.0.0.1
+dbname = vmail
+query = select domain from virtualdomains where domain='%s' and active=1
+
