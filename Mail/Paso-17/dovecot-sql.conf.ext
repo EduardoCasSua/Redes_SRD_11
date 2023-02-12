@@ -1,0 +1,35 @@
+# This file is commonly accessed via passdb {} or userdb {} section in
+# conf.d/auth-sql.conf.ext
+
+# This file is opened as root, so it should be owned by root and mode 0600.
+#
+# http://wiki2.dovecot.org/AuthDatabase/SQL
+#
+# For the sql passdb module, you'll need a database with a table that
+# contains fields for at least the username and password. If you want to
+# use the user@domain syntax, you might want to have a separate domain
+# field as well.
+#
+# If your users all have the same uig/gid, and have predictable home
+# directories, you can use the static userdb module to generate the home
+# dir based on the username and domain. In this case, you won't need fields
+# for home, uid, or gid in the database.
+#
+# If you prefer to use the sql userdb module, you'll want to add fields
+# for home, uid, and gid. Here is an example table:
+#
+# CREATE TABLE users (
+#     username VARCHAR(128) NOT NULL,
+#     domain VARCHAR(128) NOT NULL,
+#     password VARCHAR(64) NOT NULL,
+#     home VARCHAR(255) NOT NULL,
+#     uid INTEGER NOT NULL,
+#     gid INTEGER NOT NULL,
+#     active CHAR(1) DEFAULT 'Y' NOT NULL
+# );
+
+# Database driver: mysql, pgsql, sqlite
+driver = mysql
+connect = host=127.0.0.1 dbname=vmail user=1mail password=1234
+default_pass_schema = PLAIN-MD5
+password_query = select email AS user, password from virtualusers where (email='%u' or username='%n') and active=1
